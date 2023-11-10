@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import UserForm from "./components/User/UserForm";
+import UserList from "./components/User/UserList";
+import Card from "./components/UI/Card";
 
 function App() {
+  const [prevobj, setObj] = useState([]);
+
+  const getFromForm = (obj) => {
+    setObj((prevobj) => {
+      return [obj, ...prevobj];
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Card>
+      <UserForm sendToApp={getFromForm} />
+      <UserList list={prevobj} />
+    </Card>
   );
 }
 

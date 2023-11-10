@@ -1,0 +1,8 @@
+.items {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+h3 {
+  margin: 10px;
+}

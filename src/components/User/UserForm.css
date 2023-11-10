@@ -1,0 +1,18 @@
+form {
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+}
+input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 0px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+button {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
